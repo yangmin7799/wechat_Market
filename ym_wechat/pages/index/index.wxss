@@ -1,0 +1,108 @@
+/**index.wxss**/
+@import "../../style/iconfont1.wxss";
+.container-wrapper{
+  height: 100%;
+  width: 100%;
+  padding: 0 30rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.search{
+  width: 100%;
+  height: 80rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rpx;
+  text-align: center;
+  color: #666;
+  background-color: #dedede;
+}
+.icon-sousuo{
+  margin-right: 12rpx;
+}
+.navigatores{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  line-height: 40px;
+  text-align: center;
+}
+.index{
+  font-size: 20px;
+  margin-right: 5px;
+}
+.navOther{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 79%;
+  font-size: 16px;
+  text-align: center;
+}
+.icon-xiangxia,.icon-xiangshang{
+  font-size: 12px;
+}
+.navOther view{
+  width: 19%;
+  font-size: 12px;
+}
+.swiper{
+  width: 100%;
+  height: 380rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.moveSwiper{
+  width: 100%;
+  height: 380rpx;
+}
+.smallSwiper{
+  width: 48% !important;
+  height: 100%;
+}
+.smallSwiper .slide-image{
+  width: 100%;
+  height: 100%;
+}
+.scroll-view{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.items{
+  width: 48%;
+  height: 450rpx;
+  font-size: 12px;
+  color: rgba(32, 29, 29, 0.822);
+}
+.itemImg{
+  width: 100%;
+  height: 70%;
+}
+.prodTitle{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nowPrice{
+  color: #5781d0;
+  font-size: 14px;
+}
+.originPrice{
+  margin-left: 5px;
+  text-decoration: line-through;
+  color: grey;
+}
+.loadMore{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: grey;
+}

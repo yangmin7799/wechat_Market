@@ -1,0 +1,85 @@
+/* pages/cart/cart.wxss */
+.cartList{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 90rpx;
+}
+.cartBox{
+  width: 900rpx;
+  height: 300rpx;
+  display: flex;
+  border: 1px solid #999;
+  position: relative;
+}
+.checkbox-group{
+  width: 750rpx;
+  height: 100%;
+  display: flex;
+}
+.cartDel{
+  width: 150rpx;
+  height: 300rpx;
+  text-align: center;
+  line-height: 300rpx;
+  background-color: #dedede;
+}
+.checkbox{
+  width: 80rpx;
+  text-align:center;
+  line-height:300rpx;
+}
+.cartMain{
+  width: 670rpx;
+  display: flex;
+}
+.pic{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.picImg{
+  width: 100%;
+  height: 80%;
+}
+.rule{
+  padding: 20rpx;
+  display: flex;
+  font-size: 24rpx;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.decNum,.incNum{
+  padding: 6rpx 20rpx;
+  background-color: #999;
+  color: #fff;
+  border-radius: 4px;
+}
+.num{
+  padding: 6rpx 20rpx;
+}
+.subBox{
+  width: 100%;
+  height: 90rpx;
+  background-color: #dedede;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  line-height: 90rpx;
+}
+.checkAll{
+  padding-left: 10rpx;
+}
+.totalPrice{
+  width: 400rpx;
+  font-size: 24rpx;
+  padding-right: 20rpx;
+  text-align: right;
+}
+.payBtn{
+  flex: 1;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}

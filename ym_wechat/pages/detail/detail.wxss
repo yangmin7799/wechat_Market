@@ -1,0 +1,70 @@
+/* pages/detail/detail.wxss */
+@import "../../style/iconfont.wxss";
+.detailPage{
+  width: 750rpx;
+  height: 100%;
+  padding-bottom: 104rpx;
+  box-sizing: border-box;
+}
+.swiper{
+  width: 100%;
+  height: 650rpx;
+}
+.swiper-box{
+  width: 100%;
+  height: 650rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 650rpx;
+}
+.detailWrapper{
+  padding: 0 30rpx;
+}
+.descName{
+  color: rgb(73, 71, 71);
+  line-height: 60rpx;
+  margin-bottom: 30rpx;
+}
+.nowPrice{
+  color: #f00;
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+.originPrice{
+  color: #666;
+  text-decoration: line-through;
+}
+.icon{
+  height: 80rpx;
+}
+.descDetail{
+  margin-top: 30rpx;
+}
+.weui-bar__item_on{
+  color: #fff !important;
+  background-color: #666;
+}
+.bottomBtn{
+  width: 100%;
+  height: 104rpx;
+  position:fixed;
+  bottom: 0;
+  display: flex;
+  text-align: center;
+  line-height: 104rpx;
+  background-color: #fff;
+}
+.serPhone{
+  width: 100rpx;
+}
+.payBtn{
+  width: 320rpx;
+  background-color: #f00;
+  color: #fff;
+}
+.cartBtn{
+  flex: 1;
+  background-color: #000;
+  color: #fff;
+}

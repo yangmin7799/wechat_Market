@@ -1,0 +1,24 @@
+<!--pages/mine/mine.wxml-->
+<view class='user-top'>
+  <view class='userSelf'>
+    <image class='photo' src='{{avatarUrl}}'></image>
+    <text>{{nickname}}</text>
+  </view>
+  <view class='userSetting'>
+    <view catchtap='setAddress'>收货地址</view>
+    <view catchtap='personInfor'>我的资料</view>
+    <view catchtap='service'>客服电话</view>
+  </view>
+</view>
+<view class='user-order'>
+  <view class="page__bd">
+    <view class="weui-grids">
+      <block wx:for="{{order}}" wx:key="index">
+        <navigator url="/" class="weui-grid" hover-class="weui-grid_active">
+          <view class='iconfont {{item.icon}}'></view>
+          <view class="weui-grid__label">{{item.name}}</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>

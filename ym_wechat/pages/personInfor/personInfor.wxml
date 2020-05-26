@@ -1,0 +1,19 @@
+<!--pages/personInfor/personInfor.wxml-->
+<view class='information'>
+  <view class='touxiang'>
+    <text>头像</text>
+    <image src='{{avatarUrl}}'></image>
+  </view>
+  <view class='nick-name'>
+    <text>昵称</text>
+    <text>{{nickName}}</text>
+  </view>
+  <view>
+    <text>性别</text>
+    <text>{{gender==1?'男':'女'}}</text>
+  </view>
+  <view>
+    <text>地区</text>
+    <text>{{city}}</text>
+  </view>
+</view>

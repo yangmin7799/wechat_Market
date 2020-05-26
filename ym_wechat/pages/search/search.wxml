@@ -1,0 +1,52 @@
+<!--pages/search/search.wxml-->
+<view class='search'>
+  <view class="section">
+    <input
+      placeholder="{{youfavourite?youfavourite:'请输入关键字'}}"
+      placeholder-style='text-align:left;font-size:26rpx;'
+      class='ipt'
+      value='{{inputValue}}'
+      bindinput='searchWords'
+    />
+    <view class='iconfont icon-sousuo' catchtap='gotoSearch'></view>
+  </view> 
+  <view class='tips'>
+    <view class='title'>大家都在搜</view>
+    <view class='tips-list'>
+      <view
+      wx:for='{{hotWords}}'
+      wx:key='{{index}}'
+      wx:if='{{index<6}}'
+      bindtap='getWords'
+      data-word='{{item.word}}'
+    >{{item.word}}</view>
+    </view>
+  </view>
+  <view class='search-list' wx:if='{{searchList.length>0}}'>
+    <view class='scroll-view'>
+      <view class='navBar'>
+        <view class='default' bindtap='sortList' data-sort='0'>默认</view>
+        <view class='default' bindtap='sortList' data-sort='1' >价格最低</view>
+        <view class='default' bindtap='sortList' data-sort='2'>销量最高</view>
+      </view>
+      <view wx:for='{{searchList}}' wx:key='{{index}}' class='items'>
+        <image class='itemImg' src='{{item.image}}' />
+        <view class='prodTitle'>{{item.title}}</view>
+        <text class='nowPrice'>￥{{item.price}}</text>
+        <text class='originPrice'>￥{{item.originPrice}}</text>
+        <text class='salenum'>{{item.saleNum}}</text>
+      </view>
+    </view> 
+  </view>
+  <view class='doyoulike'>
+    <view>猜你喜欢</view>
+      <view class='scroll-view'>
+        <view wx:for='{{introduceList}}' wx:key='{{index}}' class='items'>
+          <image class='itemImg' src='{{item.image}}' />
+          <view class='prodTitle'>{{item.title}}</view>
+          <text class='nowPrice'>￥{{item.price}}</text>
+          <text class='originPrice'>￥{{item.originPrice}}</text>
+        </view>
+      </view>
+  </view>
+</view>

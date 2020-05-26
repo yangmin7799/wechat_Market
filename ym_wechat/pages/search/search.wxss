@@ -1,0 +1,92 @@
+/* pages/search/search.wxss */
+@import "../../style/iconfont1.wxss";
+.search{
+  width: 750rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+}
+.section{
+  width: 700rpx;
+  height: 50rpx;
+  border: 1px solid #999;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.ipt{
+  flex: 1;
+}
+.tips{
+  margin-top: 50rpx;
+  width: 700rpx;
+  font-size: 24rpx;
+}
+.tips-list{
+  margin-top: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 30rpx;
+  text-align: center;
+  justify-content: space-between;
+}
+.tips-list view{
+  background-color: #999;
+  padding: 6rpx 10rpx;
+  border-radius: 6rpx;
+  color: #fff;
+}
+.doyoulike,.search-list {
+  margin-top: 60rpx;
+  width: 700rpx;
+}
+.navBar{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  text-align: center;
+  line-height: 60rpx;
+}
+.navBar view{
+  flex: 1;
+}
+.scroll-view{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.items{
+  width: 48%;
+  height: 450rpx;
+  font-size: 12px;
+  color: rgba(32, 29, 29, 0.822);
+}
+.itemImg{
+  width: 100%;
+  height: 70%;
+}
+.prodTitle{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nowPrice{
+  color: #5781d0;
+  font-size: 14px;
+}
+.originPrice{
+  margin-left: 5px;
+  text-decoration: line-through;
+  color: grey;
+}
+.salenum{
+  margin-left: 20rpx;
+  background-color: #f00;
+  color: #fff;
+}

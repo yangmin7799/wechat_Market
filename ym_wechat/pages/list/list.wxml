@@ -1,0 +1,21 @@
+<!--pages/list/list.wxml-->
+ <view class='categoryList'>
+  <view></view>
+  <view class='scroll-view'>
+    <view
+      wx:for='{{categoryList}}'
+      wx:key='{{index}}'
+      class='items'
+    >
+      <image
+        class='itemImg'
+        src='{{item.image}}'
+        data-pid='{{item.id}}'
+        bindtap='gotoDetail' 
+      />
+      <view class='prodTitle'>{{item.title}}</view>
+      <text class='nowPrice'>￥{{item.price}}</text>
+      <text class='originPrice'>￥{{item.originPrice}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<!--pages/categroy/categroy.wxml-->
+<view class='category'>
+  <scroll-view class='category-left' scroll-y>
+    <view
+    wx:for='{{categoryList}}'
+    wx:key='{{index}}'
+    wx:if='{{index>0}}'
+    class="{{currentIndex == item.id?'itemCate':''}}"
+    data-index='{{item.id}}'
+    bindtap='tapChangeIndex'>
+    {{item.name}}
+    </view>
+  </scroll-view>
+  <scroll-view class='category-right' scroll-y>
+    <view class="page">
+      <view class="page__bd">
+        <view class="weui-grids">
+          <block
+          wx:for="{{contents}}"
+          wx:key="{{index}}"
+          >
+            <view
+            class="weui-grid"
+            hover-class="weui-grid_active"
+            data-listurl='{{item.url}}'
+            bindtap='gotoList'>
+              <image class="weui-grid__icon" src="{{item.imageUrl}}" />
+              <view class="weui-grid__label">{{item.title}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <!-- <view
+    wx:for='{{contents}}'
+    wx:key='{{index}}'
+    class='s-img'
+    >
+    <image src='{{item.imageUrl}}' />
+    </view> -->
+  </scroll-view>
+</view>

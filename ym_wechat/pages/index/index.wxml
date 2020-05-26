@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='container-wrapper'>
+    <view class="search" bindtap='gotoSearch'>
+      <view class='iconfont icon-sousuo'></view>
+      <view>搜索</view>
+    </view>
+    <view class="navigatores navigatoresOne" wx:if='{{hideNev === true}}'>
+      <navigator url="/pages/index/index" class='index'>首页</navigator>
+      <view class='navOther'>
+        <view bindtap='gotoCate' data-id='{{item.id}}' wx:for='{{navList}}' wx:key='index' wx:if="{{index<5}}">{{item.name}}</view>
+      </view>
+      <text class='iconfont icon-xiangxia' catchtap='showNevList'></text>
+    </view>
+    <view class="navigatores navigatoresTwo" wx:else='{{hideNev===false}}' wx:key='index'>
+      <navigator class='index'>首页</navigator>
+      <view class='navOther'>
+        <view catchtap='gotoCate' wx:for='{{navList}}' wx:key='index'>{{item.name}}</view>
+      </view>
+       <text class='iconfont icon-een' catchtap='showNevList'></text>
+    </view>
+    <view class="swiper">
+      <swiper
+        indicator-dots
+        indicator-active-color='blue'
+        autoplay
+        interval="3000"
+        duration="1000">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view>
+      <view>专题</view>
+      <view>
+        <swiper indicator-indicator-dots class='moveSwiper'>
+          <block wx:for="{{navList}}" wx:key="{{index}}">
+            <swiper-item class="smallSwiper">
+              <image src="{{item.imageUrl}}" class="slide-image"/>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+    <view class='introduceList'>
+      <view>推荐</view>
+      <view class='scroll-view'>
+        <view wx:for='{{introduceList}}' wx:key='{{index}}' class='items' wx:if='{{index<10}}'>
+          <image class='itemImg' src='{{item.image}}' />
+          <view class='prodTitle'>{{item.title}}</view>
+          <text class='nowPrice'>￥{{item.price}}</text>
+          <text class='originPrice'>￥{{item.originPrice}}</text>
+        </view>
+      </view>
+      <view class='loadMore'>查看更多></view>
+      <view class='scroll-view'>
+        <view wx:for='{{introduceList}}' wx:key='{{index}}' class='items' wx:if='{{index>=10}}'>
+          <image class='itemImg' src='{{item.image}}' />
+          <view class='prodTitle'>{{item.title}}</view>
+          <text class='nowPrice'>￥{{item.price}}</text>
+          <text class='originPrice'>￥{{item.originPrice}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

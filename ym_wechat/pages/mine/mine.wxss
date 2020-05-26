@@ -1,0 +1,38 @@
+/* pages/mine/mine.wxss */
+@import "../../style/iconfont.wxss";
+.user-top,.user-order{
+  width: 700rpx;
+  height: 350rpx;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  background-color: #dedede;
+  margin-bottom: 15rpx;
+}
+.userSelf{
+  width: 620rpx;
+  height: 60%;
+  padding-left: 80rpx;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+}
+.photo{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.userSetting{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.user-order{
+  background: transparent;
+}
+.iconfont{
+  font-size: 40rpx;
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+/* pages/personInfor/personInfor.wxss */
+.information{
+  width: 750rpx;
+  font-size: 14px;
+  color: #666;
+}
+.information view{
+  padding: 10rpx 30rpx;
+  height: 60rpx;
+  background-color: #eee;
+  margin-bottom: 5rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.touxiang image{
+  width: 60rpx;
+  height: 60rpx;
+}

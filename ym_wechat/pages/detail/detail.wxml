@@ -1,0 +1,70 @@
+<!--pages/detail/detail.wxml-->
+<view class='detailPage'>
+  <view class="swiper">
+    <swiper
+      indicator-dots
+      indicator-active-color='#dedede'
+      autoplay
+      interval="3000"
+      duration="1000"
+      class='swiper-box'
+    >
+      <block wx:for="{{detailSwiper}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.url}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='detailWrapper'>
+    <view class='descList'>
+      <view class='descName'>{{title}}</view>
+      <view class='price'>
+        <text class='nowPrice'>￥{{price}}</text>
+        <text class='originPrice'>￥{{originPrice}}</text>
+      </view>
+      <view class='icon'>icons</view>
+      <view class='descDetail'>
+        <view class="page__bd">
+        <view class="weui-tab">
+          <view class="weui-navbar">
+            <block wx:for="{{tabs}}" wx:key="index">
+              <view
+              id="{{index}}"
+              class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}"
+              bindtap="tabClick"
+              data-index='{{index}}'
+              >
+                  <view class="weui-navbar__title">{{item}}</view>
+              </view>
+            </block>
+          </view>
+          <view class="weui-tab__panel">
+              <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                <image
+                  wx:if='{{item.image.url}}'
+                  src='{{item.image.url}}'
+                  style='height:{{item.image.height}}rpx;width:100%'
+                  wx:for='{{descList}}'
+                  wx:key='{{index}}'/>
+              </view>
+              <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                <text>
+                  — 所售商品均获品牌授权，正品保证。
+                  — 中国大陆地区免运费，部分偏远地区不包邮，详情以商品页面标注为准。
+                  — 蜡烛、液态品、手表等含电池产品无法空运，运输时间相较普通空运件会更久。
+                  — 如出现产品质量问题请在签收后72小时内联系客服。
+                </text>
+              </view>
+          </view>
+        </view>
+    </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bottomBtn'>
+  <view class='serPhone'>客服</view>
+  <view class='cartBtn' bindtap='addToCartHandle'>加入购物车</view>
+  <view class='payBtn'>立即购买</view>
+</view>
